@@ -10,4 +10,8 @@ class UsersController < ApplicationController
 
   def check
   end
+
+  def destroy
+  end
+  
 end
