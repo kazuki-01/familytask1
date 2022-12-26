@@ -1,2 +1,46 @@
-<h1>Users#check</h1>
-<p>Find me in app/views/users/check.html.erb</p>
+<div class="user-check">
+  <div class="background">
+    <div class="container">
+
+      <div class="mein-wrapper">
+        <div class="heading">
+          <h2 >登録内容の確認</h2>
+        </div>
+        <div class="formbox">
+          <%= form_with url: check_path ,method: :get do |form| %>
+            <div class="form">
+              <img class="image" src="/photo/user.jpeg" alt="">
+            </div>
+
+            <div class="form">
+              <div class="name">
+               <p> お名前</p><br>
+               <h2>山田 太郎</h2>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="title">
+                <p> メールアドレス</p><br>
+              </div>
+              <h2>yamada_tarou@gmail.com</h2>
+            </div>
+
+            <div class="form">
+              <div class="password">
+                <p> パスワード</p><br>
+                <h2>123456789</h2>
+              </div>
+            </div>
+
+            <div class="btn-wrapper">
+              <%= form.submit "登録する"%>   
+              <a href="#">修正する</a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
