@@ -1,2 +1,37 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="user-login">
+  <div class="background">
+    <div class="container">
+
+      <div class="mein-wrapper">
+        <div class="heading">
+          <h2 >ログイン</h2>
+        </div>
+        <div class="formbox">
+          <%= form_with url: check_path ,method: :get do |form| %>
+            <div class="form">
+              <div class="form-title">
+                <%=form.label :メールアドレス %><br>
+              </div>
+              <%=form.email_field :メールアドレス %>
+            </div>
+
+            <div class="form">
+              <div class="form-title">
+                <%=form.label :パスワード %><br>
+              </div>
+              <%=form.password_field :パスワード %>
+            </div>
+
+            <div class="btn-wrapper">
+              <%= form.submit "ログイン"%>   
+            </div>
+            <div class="new-btn">
+              <a href="#">新規登録はこちら</a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
