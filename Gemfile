@@ -45,3 +45,6 @@ gem 'devise'
 gem "sassc-rails"
 
 gem 'bcrypt',       '3.1.12'
+
+gem 'mini_magick'  #ImageMagickをrailsで扱えるようにしてくれるGem
+gem 'image_processing'  #MiniMagickで提供できない画像サイズを調整する機能
