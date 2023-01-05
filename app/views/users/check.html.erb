@@ -7,29 +7,32 @@
           <h2 >登録内容の確認</h2>
         </div>
         <div class="formbox">
-          <%= form_with url: check_path ,method: :get do |form| %>
+          <%= form_with url: users_path ,method: :post do |form| %>
             <div class="form">
+             <% if @user.image.attached? %>
+               <%= image_tag image %>
+             <% end %>
               <img class="image" src="/photo/user.jpeg" alt="">
             </div>
 
             <div class="form">
               <div class="name">
-               <p> お名前</p><br>
-               <h2>山田 太郎</h2>
+               <p> <%=form.label :name, "お名前" %><</p><br>
+               <h2><input name="name" value="<%= @user.name %>"></h2>
               </div>
             </div>
 
             <div class="form">
               <div class="title">
-                <p> メールアドレス</p><br>
+                <p><%=form.label :email, "メールアドレス" %></p><br>
               </div>
-              <h2>yamada_tarou@gmail.com</h2>
+              <h2><input name="email" value="<%= @user.email %>"></h2>
             </div>
 
             <div class="form">
               <div class="password">
-                <p> パスワード</p><br>
-                <h2>123456789</h2>
+                <p><%=form.label :password, "パスワード" %></p><br>
+                <h2><input name="password" value="<%= @user.password %>"></h2>
               </div>
             </div>
 

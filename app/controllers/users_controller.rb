@@ -6,11 +6,11 @@ class UsersController < ApplicationController
   end
 
   def check
-    @user = User.new(image: params[:プロフィールアイコン], name: params[:お名前], email: params[:メールアドレス], password: params[:パスワード])
+    @user = User.new(image: params[:image], name: params[:name], email: params[:email], password: params[:password])
   end
 
   def create
-    @user = User.new(image: params[:プロフィールアイコン], name: params[:お名前], email: params[:メールアドレス], password: params[:パスワード])
+    @user = User.new(image: params[:image], name: params[:name], email: params[:email], password: params[:password])
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_path, notice: "新規登録が完了しました。"
