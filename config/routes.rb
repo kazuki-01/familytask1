@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'home#top'
 
-  devise_for :users
   resources :users
   get '/check' => 'users#check'
+  post '/users' => 'users#create'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
