@@ -36,6 +36,13 @@
               </div>
             </div>
 
+            <div class="form">
+              <div class="password">
+                <p><%=form.label :password_confirmation, "パスワード(確認)" %></p><br>
+                <h2><input name="password_confirmation" value="<%= @user.password_confirmation %>"></h2>
+              </div>
+            </div>
+
             <div class="btn-wrapper">
               <%= form.submit "登録する"%>   
               <a href="#">修正する</a>
