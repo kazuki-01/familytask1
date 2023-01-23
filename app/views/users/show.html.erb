@@ -1,2 +1,23 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="user-check">
+  <div class="background">
+    <div class="container">
+      <div class="mein-wrapper">
+        <div class="container">
+          <div class="page-title">
+            <h1>ユーザー情報</h1>
+          </div>
+
+          <div class="text-box">
+            <div class="title">お名前</div>
+              <p><%= current_user.name %></p>
+          </div>
+
+          <div class="text-box">
+            <div class="title">メールアドレス</div>
+            <p><%= current_user.email %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
