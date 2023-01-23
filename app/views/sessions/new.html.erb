@@ -7,7 +7,7 @@
           <h2 >ログイン</h2>
         </div>
         <div class="formbox">
-          <%= form_with url: check_path ,method: :get do |form| %>
+          <%= form_with model:@user do |form| %>
             <div class="form">
               <div class="form-title">
                 <%=form.label :email, "メールアドレス" %><br>
