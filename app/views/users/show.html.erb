@@ -16,6 +16,7 @@
             <div class="title">メールアドレス</div>
             <p><%= current_user.email %></p>
           </div>
+          <%= link_to t("ログアウト"), logout_path, data: {turbo_method: :delete, turbo_confirm: 'ログアウトしてよろしいですか？'}, class: "#" %>
         </div>
       </div>
     </div>
