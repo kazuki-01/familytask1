@@ -98,7 +98,7 @@
           width: 100%;
           background-color: rgba(248, 200, 138, 0.7);
           padding-top: 20px;
-          height: 600px;
+          height: auto;
           margin-top: 10px;
           text-align: center;
           .image{
@@ -139,7 +139,8 @@
               line-height: 50px;
               text-decoration: none;
               text-align: center;
-              margin-top: 40px;
+              margin: 40px 0px;
+              
             }
           }
         }
