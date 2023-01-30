@@ -14,9 +14,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def after_sitn_out_path_for
-    login_path
-  end
 
   private
   def configure_permitted_parameters

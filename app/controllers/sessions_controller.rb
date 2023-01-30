@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to after_sitn_out_path_for, notice: "ログアウトしました。"
+    redirect_to login_path, notice: "ログアウトしました。"
   end
   
 end
