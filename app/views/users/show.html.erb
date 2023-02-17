@@ -6,6 +6,10 @@
           <div class="page-title">
             <h1>ユーザー情報</h1>
           </div>
+              <%= User.human_attribute_name(:ユーザーアイコン) %>
+               <% if current_user.user_icon.attached? %>
+                 <%= image_tag current_user.user_icon %>
+               <% end %>
 
           <div class="text-box">
             <div class="title">お名前</div>

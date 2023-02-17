@@ -10,10 +10,10 @@
           <%= form_with model: @user, url: check_path ,method: :get do |form| %>
             <div class="form">
               <div class="form-title">
-                <%=form.label :image, "プロフィールアイコン" %><br>
+                <%=form.label :user_icon, "ユーザーアイコン" %><br>
               </div>
               <div class="file-form">
-                <%= form.file_field :image %>
+                <%= form.file_field :user_icon %>
               </div>
             </div>
 

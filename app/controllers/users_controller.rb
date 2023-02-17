@@ -6,14 +6,15 @@ class UsersController < ApplicationController
   end
 
   def check
-    Rails.logger.debug(params[:image])
+    Rails.logger.debug(params[:user_icon])
     @user = User.new(user_params)
   end
 
   def create
     Rails.logger.debug("aaaaa")
-    @user = User.new(image: params[:image], name: params[:name], email: params[:email], password: params[:password])
+    @user = User.new(user_icon: params[:user_icon], name: params[:name], email: params[:email], password: params[:password])
     Rails.logger.debug("bbbbb")
+    Rails.logger.debug(params[:user_icon])
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user), notice: "新規登録が完了しました。"
@@ -34,7 +35,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:image,:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:user_icon, :name, :email, :password, :password_confirmation)
   end
   
 end
